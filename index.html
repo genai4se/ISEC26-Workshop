@@ -1,0 +1,1042 @@
+<!doctype html>
+<html>
+  <head>   
+    
+    <meta charset="utf-8">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--<meta name="viewport" content="width=1024">-->
+
+     <meta name="description" content="" />
+    
+	  <meta name="description" content="This workshop explores the intersection of Generative AI (GenAI), Large Language Models (LLMs), and traditional software engineering practices like Model-Driven Engineering (MDE), Knowledge Engineering (KE), and Reverse Engineering (RE). It will focus on how GenAI can enhance software development tasks such as code generation, debugging, testing, and legacy modernization, while addressing challenges like local knowledge integration, quality assurance, and AI-driven knowledge mining from software artifacts. The aim is to define a trajectory toward more efficient, accurate, and cost-effective software engineering using AI-powered tools and agents.">
+	  <meta name="author" content="" />
+	  <meta property="og:title" content="Workshop on Generative AI for Software Engineering (GenAI4SE)" />
+	  <meta property="og:description" content="This workshop explores the intersection of Generative AI (GenAI), Large Language Models (LLMs), and traditional software engineering practices like Model-Driven Engineering (MDE), Knowledge Engineering (KE), and Reverse Engineering (RE). It will focus on how GenAI can enhance software development tasks such as code generation, debugging, testing, and legacy modernization, while addressing challenges like local knowledge integration, quality assurance, and AI-driven knowledge mining from software artifacts. The aim is to define a trajectory toward more efficient, accurate, and cost-effective software engineering using AI-powered tools and agents." />
+	  <meta property="og:url" content="https://genai4se.github.io/ISEC25-Workshop/" />
+	  <meta property="og:site_name" content="Workshop on Generative AI for Software Engineering (GenAI4SE)" />
+	  <meta property="og:type" content="website" />
+	  <title>Workshop on Generative AI for Software Engineering (GenAI4SE)</title>
+	  <meta name="keywords" content="Ai,software engineering workshop, artificial intelligence, SDLC, generative ai, llm, SE,Large Language Models,Genai for software, Genai for SE, Software developmnet, GenAi4SE, Workshop, Software Engineering Workshop, ISEC'25 Workshop, Generative AI, software engineering, ISEC 2025, AI workshop, code generation, Large language models workshop for software engineering, Genai SDLC workshop, AI in software development, AI conference, isec workshop, software development life cycle">
+ 
+	  
+
+    <!-- Bootstrap 4-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- Custom css--> <link rel="stylesheet" href="assets/styles.css">
+
+    <style>
+
+        .content {
+            flex: 1;
+        }
+        .columns {
+            display: flex;
+        }
+        .left-column {
+            width: 65%; /* Adjust the width as needed */
+            padding: 10px;
+        }
+        .right-column {
+            width: 35%; /* Adjust the width as needed */
+            padding: 0px;
+            margin-left: 5px;
+            
+        }
+        .l-column {
+            width: 50%; /* Adjust the width as needed */
+            padding: 0px;
+            margin-right: 0px;
+        }
+        .r-column{
+            width: 50%; /* Adjust the width as needed */
+            padding: 0px;
+            margin-left: 0px;
+            }
+        .table-container {
+            width: 100%;
+            
+            
+        }
+        table {
+            width: 70%;
+            margin-left: 80px;
+            margin-right: 0px;
+            
+        }
+        table, th, td {
+            border: 1px solid #000;
+            border-collapse: collapse;
+        }
+        th, td {
+            font-size: xx-small;
+            padding: 8px;
+            text-align: left;
+        }
+	            /* Custom CSS for mobile optimization */
+@media only screen and (max-width: 768px) {
+    .navbar-nav .nav-link {
+        padding: 0.5rem 1rem;
+    }
+    #banner-top {
+        padding: 20px;
+    }
+    #banner-top h1 {
+        font-size: 24px;
+    }
+    #banner-top h3 {
+        font-size: 16px;
+    }
+
+    /* Apply styles when screen width is 767px or less */
+    /* Stack the flex items vertically */
+  div[style="display: flex; justify-content: space-between; margin-left: 40px; margin-right: 40px;"] {
+    flex-direction: column;
+  }
+  
+  /* Adjust the margin for better spacing */
+  div[style="flex-basis: 40%; margin-right: 40px;"] {
+    margin-left: 0px;
+  }
+  /* CSS for mobile view */
+    .columns {
+        flex-direction: column;
+    }
+
+    .right-column {
+        order: 1; /* Change the order of the right column */
+    }
+    
+    .organizer {       flex-direction: column;   }   
+    table {
+        width: 100%;
+        margin-left: 40px;
+    }
+  
+    
+}
+    </style>
+  </head>
+
+
+  <body>
+    <div class="wrapper">
+      <!-- Navigation -->
+      <!-- Uncomment to use logo 
+      <div class=" container-fluid container-top"><a href="https://www.uibk.ac.at/"><img src="/dtworkshop/assets/css/img/uibklogo.png" class="img-fluid uibklogo" alt="logo university of innsbruck"></a></div>
+      -->
+  
+      <nav class="navbar navbar-expand-lg navbar-dark ">
+
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+           <span class="navbar-toggler-icon"></span>
+        </button>
+      
+
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav navbar-dark">
+        
+        <a class="navbar-brand" href="" >
+          Home</a>
+        
+        <a class="navbar-brand" href="#organizers" >
+          Organizers</a>
+        
+	<a class="navbar-brand" href="#CallForAbstract" >
+    CFA And CFP</a>
+
+    <!--<a class="navbar-brand" href="#schedule" >
+        Program</a>
+     <a class="navbar-brand" href="speaker.html" >
+            Invited Speakers</a> -->
+        <div class="dropdown" style="margin-top: 17px;">
+            <a class="navbar-brand dropdown-toggle" href="#" role="button" id="programDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                Program
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="programDropdown">
+                <li><a class="dropdown-item" href="#schedule">Schedule</a></li>
+                <li><a class="dropdown-item" href="speaker.html">Invited Speakers</a></li>
+		<li><a class="dropdown-item" href="Accepted_papers.html">Accepted Papers</a></li>
+                <li><a class="dropdown-item" href="Accepted_abstracts.html">Accepted Abstracts</a></li>
+                <!--<li><a class="dropdown-item" href="Accepted_papers.html">Accepted Abstracts</a></li>-->
+
+                
+            </ul>
+        </div>
+        
+           
+
+        <a class="navbar-brand" href="#venue" >
+          Venue & Registration</a>
+
+	      
+	<a class="navbar-brand" href="#Contact" >
+          Contact</a>
+        	      
+      </div>
+     </div>      
+    </div>
+   </div>
+  </nav>
+
+
+      
+      <div id="banner-top">
+        
+        <h1>Workshop on GenAI Based Software Engineering</h1>
+              <h3> Co-located with <a href="https://conf.researchr.org/home/isec-2025">ISEC 2025</a> February 20<sup>th</sup>, 2025, NIT Kurukshetra, India</h3>
+              <hr />
+      </div> 
+      
+        
+
+<!doctype html>
+  <head>
+    <meta charset="utf-8">
+    <title>Workshop on GenAi Based Software Engineering</title>
+  </head>
+  <body>
+    
+   <marquee behavior="scroll" direction="left" scrollamount="10" style="color: red; font-style: italic;">
+Program schedule has been updated on the site. Please check the Schedule under Program section for more details.
+    </marquee>
+    
+    
+    <div style="display: flex; justify-content: space-between; margin-left: 40px; margin-right: 40px;">
+
+    <div style="flex-basis: 60%;">
+        <br>
+        <h3 style="margin-left: 20px;">Objective of Workshop</h3> <hr>
+        <p>
+        Software engineering in the large is an effort-intensive and time-consuming activity whereas IT systems today need to make changes in the shortest possible duration. 
+		Most complex, large-scale software systems of today derive their requirements from existing (legacy) software and partial (incomplete) descriptions. 
+		Software development is thus a complex combination of transformation, reverse and forward engineering, involving code, data, and specifications, wherein data is both structured and unstructured. 
+		Expertise from subject matter experts (SMEs) is essential at each phase, which brings in the important component of domain knowledge. 
+		While Model-Driven Engineering (MDE), Knowledge Engineering (KE), and Reverse Engineering (RE) have mitigated some of the challenges, the emergence of Generative AI techniques holds the potential for a substantial breakthrough, though is yet to bring a consistent and substantial jump in productivity. 
+		There are challenges in understanding and resolving issues reported in GitHub. The absence of high-quality datasets that encompass a wide range of programming tasks, styles, and languages add to the challenges. 
+		With dynamically changing businesses of enterprises, and evolution of fast-changing and new technologies, the LLMs need to keep pace with the evolving code knowledge. 
+	</p>
+	<p>
+		    Use of GenAI for software development has seen increasing maturity in the past 1+ year. Different tools like GitHub Copilot, Amazon Q developer agent (Code Whisperer), AutoCodeRover + GPT 4o, Assistant GRU, SWE agent + Claude 3.5 Sonnet have enhanced and are enhancing code development, code completion, test case generation, debugging and issue fixing tasks. 
+		Some methods have exploited the instruction tuning and reinforcement learning with feedback. 
+		Several more small and large models and tools are exploiting RACG techniques and claim to considerably enhance the software development tasks. 
+	</p>
+	<p>
+		    The new paradigm of LLM Based AI agents, have demonstrated effectiveness in variety of Software Engineering (SE) tasks, such as program generation, software testing and debugging and  program improvement as well as end-to-end software engineering. 
+		These agents can extend the capabilities of the backbone LLMs by utilizing external resources and tools and soliciting human interactions. 
+		From SE perspective, there is a need to analyze how LLM-based agents can tackle different software development and maintenance tasks. 
+		Whereas, from the agent perspective, there is a need to throw some light on the basic agentic design components, including planning, memory, perception, action and their roles and collaboration mechanisms, in multi-agent settings.
+         </p>
+        <p>
+            The proposed workshop aims to provide a collaborative 
+platform for researchers and practitioners to delve into the 
+convergence of traditional MDE, KE, and RE methodologies 
+together with Generative AI technologies. By synergizing the 
+strengths of Gen AI, LLM Agentic Frameworks, modeling, and 
+knowledge representation for SDLC, our goal is to define a 
+trajectory toward enhanced software engineering practices. We 
+seek discussion on the following pivotal questions:
+        
+         <p>
+            <p>
+                <ol style="font-size: 1px;margin-left: 50px;">
+                        <li>Architecting, designing, developing and maintaining 
+industry-strength software is a multi-skill, long-drawn activity that cannot be effectively addressed by LLMs 
+alone. What kinds of augmentation make it effective?
+ </li>
+                        <li>LLM is a vast storehouse of general information, but the 
+typical need during SDLC is rather sharply focused. How 
+best to bear local knowledge at scale to get the required 
+focus? </li>
+                        <li>How can Generative AI be effectively utilized for mining 
+and constructing purpose-driven knowledge from 
+software artifacts? Can Generative AI catalyze existing 
+legacy modernization techniques to reduce cost, time and 
+improve correctness?</li>
+                        <li>How can Generative AI enhance the synthesis of tests 
+and test data during SDLC? </li>
+                        <li>Can bug fixes and change requests be analyzed and 
+implemented expeditiously using Generative AI?</li>
+                        <li>What are the best practices for maintaining the accuracy, 
+relevance and reliability of Generative AI generated 
+software artifacts?</li>
+                        <li>What are the state-of-the-art techniques, experimental 
+models, methodologies, benchmark datasets and 
+evaluation metrics employed for the usage of LLMs and 
+LLM-based agents in SE applications? What are the key 
+differences in task performance between LLMs and 
+LLM-based agents?</li>
+                </ol>      
+              <P id="CallForAbstract">The workshop aims to foster interactive discussions, enabling participants to collectively shape the future of advanced software engineering. The inaugural edition will feature <a href="speaker.html">talks by invited speakers</a> who are exploring one or more of the above questions, interspersed with <a href="">short experiences of researchers</a> who are exploring specific challenges of software engineering using GenAI techniques. Time permitting, we will have <a href="">short lightening talks</a> by researchers to share interesting observations and anecdotes.</p>
+            
+    </div>
+ 
+    <div style="flex-basis: 40%;margin-right: 80px;"><br><br><br><br>
+        <table border="1" style="width: 100%;">
+            <colgroup>
+                <col span="1" style="width: 30%;">
+                <col span="1" style="width: 70%;">
+            </colgroup>
+            <tr>
+                <td colspan="2" style="background:#686868;border-right:0.2px inset #2e2e30;text-align:center;color: aliceblue;"><br />
+                <p style="text-align:center;"><strong><a style="color: aliceblue;" href="speaker.html">Invited Speakers</a></strong></p>
+                </td>
+            </tr>
+            <!--<tr>
+                <td colspan="2" >
+                    <p style="text-align:center;font-size: 11px;font-style: italic;">Please note that the list of confirmed speakers will be updated on our website shortly.</p>
+
+                </td>
+            </tr>-->
+           
+            <tr>
+                <td>
+                    <p style="text-align:center;">Dr. Diptikalyan Saha</p>
+                    <p style="text-align:center;font-size: 11px;font-style: italic;">IBM Research, India</p>
+                </td>
+                <td >
+                    <p style="text-align:center;font-size: 11px;"><a href="speaker.html#Diptikalyan">Navigating the Landscape of AI Agents: Characteristics, Innovations, and Future Directions</a></p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p style="text-align:center;">Karthik Vaidhyanathan</p>
+                    <p style="text-align:center;font-size: 11px;font-style: italic;">IIIT-Hyderabad, India</p>
+                </td>
+                <td>
+                    <p style="text-align:center;font-size: 11px;"><a href="speaker.html#Karthik">Playing with Abstractions: At the crossroads of Software Architecture and Generative AI</a></p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p style="text-align:center;">Rajaswa Patil</p>
+                    <p style="text-align:center;font-size: 11px;font-style: italic;">Applied AI Consultant; Previously: Postman/Microsoft</p>
+                </td>
+                <td>
+                    <p style="text-align:center;font-size: 11px;"><a href="speaker.html#Rajaswa">From Code to Cognition: How Agentic AI Unites Software 1.0 and Software 2.0</a></p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p style="text-align:center;">Dr. Alexander Serebrenik</p>
+                    <p style="text-align:center;font-size: 11px;font-style: italic;">Eindhoven University of Technology</p>
+                </td>
+                <td>
+                    <p style="text-align:center;font-size: 11px;"><a href="speaker.html#Alexander">Exploring the Effect of Multiple Natural Languages on Code Suggestion Using GitHub Copilot</a></p>
+                </td>
+            </tr>
+        </table>
+        <br><br><br>
+        <table border="1" style="width: 100%;">
+            <colgroup>
+                <col span="1" style="width: 30%;">
+                <col span="1" style="width: 70%;">
+            </colgroup>
+            <tr>
+                <td colspan="2" width="982" class="col-md-12" style="background:#686868;border-right:0.2px inset #2e2e30;text-align:center;color: aliceblue;"><br />
+                <p style="text-align:center;color:white;"><strong>Important Dates</strong></p>
+                </td>
+            </tr>
+
+            <tr>
+                <td width="206">
+                <p style="text-decoration: line-through;">22 Dec 2024 </p>
+                </td>
+                <td width="400">
+                <p style="text-decoration: line-through;"> Deadline for submission</p>
+                </td>
+            </tr>
+		 <tr>
+                                <td width="200">
+                                <p  style="text-decoration: line-through;">5 Jan 2025</p>
+                                </td>
+                                <td width="400">
+                                <p  style="text-decoration: line-through;"> Extended date for submission</p>
+                                </td>
+                 </tr>
+            <tr>
+                <td width="200">
+                <p style="text-decoration: line-through;">22 Jan 2025</p>
+                </td>
+                <td width="400">
+                <p style="text-decoration: line-through;"> Notification of acceptance</p>
+                </td>
+            </tr>
+	    
+            <tr>
+                <td width="200">
+                <p>10 Feb 2025</p>
+                </td>
+                <td width="400">
+                <p> Publishing list of accepted talks</p>
+                </td>
+            </tr>
+            <tr>
+                <td width="200">
+                <p>20 Feb 2025
+                </p>
+                </td>
+                <td width="400">
+                <p> GenAI4SE workshop</p>
+                </td>
+            </tr>
+        </table>
+        <br><br><br><br>
+                        <table border="1" style="width: 100%;">
+                            <colgroup>
+                                <col span="1" style="width: 30%;">
+                                <col span="1" style="width: 70%;">
+                            </colgroup>
+                            <tr>
+                                <td colspan="2" width="982" class="col-md-12" style="background:#686868;border-right:0.2px inset #2e2e30;text-align:center;color: aliceblue;"><br />
+                                <p style="text-align:center;color:white;"><strong>Submission Link</strong></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" width="982" class="col-md-12" style="border-right:0.2px inset #2e2e30;text-align:center;"><br />
+                                <p style="text-align:center;"><strong> <a href="">Abstract Submission Link</a></strong></p>
+				<br>
+				<p style="text-align:center;"><strong> <a href="">Paper Submission Link</a></strong></p>
+                                </td>
+                            </tr>
+                            
+                        </table>
+
+    </div>
+</div>
+
+<!--<div style="margin-left: 40px;margin-right: 40px;">
+    <P id="CallForAbstract">The workshop aims to foster interactive discussions, enabling participants to collectively shape the future of advanced software engineering. The inaugural edition will feature <a href="speaker.html">talks by invited speakers</a> who are exploring one or more of the above questions, interspersed with <a href="">short experiences of researchers</a> who are exploring specific challenges of software engineering using GenAI techniques. Time permitting, we will have <a href="">short lightening talks</a> by researchers to share interesting observations and anecdotes.</p>
+
+  
+</div>-->
+   
+        <div class="columns" >
+            
+            <div class="left-column">
+                    <div class="row" style="content: '';display: table;clear: both;margin-left: 20px;">
+                        <h3 id="" >Call For Abstract And Call For Paper</h3>
+                        <hr>
+                            <p>Software Engineering (SE) in the large is an effort-intensive and time-consuming activity whereas IT systems today need to make changes in the shortest possible duration. 
+				    Software development is thus a complex combination of transformation, reverse and forward engineering, involving code, data, and specifications.  
+				    While Model-Driven Engineering (MDE), Knowledge Engineering (KE), and Reverse Engineering (RE) have mitigated some of the challenges, the emergence of Generative AI techniques holds the potential for a substantial breakthrough and is an important area of study and exploration. 
+				    The absence of high-quality datasets that encompass a wide range of programming tasks, styles, and languages add to the challenges. Further, as the technology and business landscapes change, LLMs constantly need to match the pace. </p>
+                            <p>The new paradigm of LLM Based AI agents have demonstrated effectiveness in variety of Software Engineering (SE) tasks, such as program generation, software testing and debugging and program improvement as well as end-to-end software engineering. 
+				    These agents can extend the capabilities of the backbone LLMs by utilizing external resources and tools and soliciting human interactions.   
+				    From SE perspective, there is a need to analyze how LLM-based agents can tackle tasks across Software Development Lifecycle (SDLC) and how to design the basic agentic components, including planning, memory, perception, action and their roles and collaboration mechanisms, in multi-agent settings.</p>
+                            <p>The Workshop on GenAI Based Software Engineering aims to provide a collaborative platform for researchers from academia industry, and practitioners to delve into the convergence of traditional MDE, KE, and RE methodologies and software engineering approaches together with Generative AI technologies. 
+				    We solicit submissions in the form of <b>one-page abstract (max 500 words) OR papers of maximum 5-pages + 1-page references</b> in the <a href="https://www.acm.org/publications/proceedings-template">standard ACM format</a> describing case studies, interesting experiments, techniques and best practices, and lessons learned while applying Generative AI and LLM agent frameworks to various SE areas, but not limited to the following topics:</p>
+                            <div class="list-columns">
+                                <ul id="list">
+                                    <li>Agentic frameworks for SE</li>
+                                    <li>Intelligent Code Assistants </li>
+                                    <li>Neuro-Symbolic Approaches for SE</li>
+                                    <li>GenAI Frameworks for SE with Human in the Loop</li>
+                                    <li>Advanced Retrieval Augmentation for SE</li>
+                                    <li>Datasets for SE</li>
+                                    <li>LLMs for Knowledge Engineering</li>
+                                    <li>Tuning of SLMs (Small Language Models) for SE</li>
+                                    <li>Technical Risks associated in AI/ML implementations</li>
+                                    <li>Negative Results demonstrating failed application of GenAI for SE</li>
+                                    <li>Low-cost GenAI solutions for SE</li>
+				    <li>Reliability of GenAI generated software artifacts</li>
+				    <li>LLMs as a judge for evaluation of SE tasks</li>
+                                </ul>
+                            </div>
+                            <br>
+			    <p>The areas of interest across SE include but are not restricted to Requirements Engineering, Software Architecture and Design, Software Development and Maintenance, Software Verification, Testing and Debugging, Legacy Modernization, Reverse Engineering from code, documents, Software Analysis, Repository level coding tasks including code development , code completion, test case generation, debugging and issue fixing tasks.</p>
+                            <p><b>Submission Information :</b> Abstract (maximum 500 words) OR papers (maximum 5 pages + 1 page references). Abstracts can be from already published work at other conference venues and should include the details of when and where the original work is published. Papers should be original work, not being considered for publishing elsewhere, written in text format, in English. Accepted papers may be considered for publication at an appropriate forum (either in ACM DL, or SE Notes or CEUR publication).
+				    Abstracts should be submitted via the Google Form Link: <a href="https://docs.google.com/forms/d/e/1FAIpQLScwF83gMHc3i80HBjIOFWsjN4BLko2vKBrZpOgpW0m_W1cZ-A/viewform">Click Here!</a>. Papers should be submitted via Easychair link: <a href="https://easychair.org/conferences?conf=genai4se">Submit Here</a>. In case of any questions, you can write an email to <a href="mailto: genai4se@googlegroups.com">genai4se@googlegroups.com</a></p>
+                            <p><b>Acceptance criteria :</b> Abstracts and papers will be selected for presentation based on reviews by members of the workshop organizing committee. 
+				    The tentative criteria will be the clarity of articulation of the problem being solved, motivating the need of Generative AI to solve the problem and the novelty of the approach. 
+				    Authors of accepted papers will receive further instructions for submitting camera-ready versions.</p>
+			    <p>At least one of the authors of the selected abstract or paper MUST register for the ISEC conference to present their paper at the workshop. </p>
+
+                          
+                    </div>
+            </div>
+            <!--
+            <div class="right-column" id="table">
+                <br><br><br>
+                <div class="row" style="content: '';display: table;clear: both;">
+                    <div class="table-container">
+                        <table>
+                            <tr>
+                                <td colspan="2" width="982" class="col-md-12" style="background:#686868;border-right:0.2px inset #2e2e30;text-align:center;color: aliceblue;"><br />
+                                <p style="text-align:center;color:white;"><strong>Important Dates</strong></p>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td width="206">
+                                <p>22 Dec 2024 </p>
+                                </td>
+                                <td width="400">
+                                <p> Deadline for submitting abstracts</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="200">
+                                <p>5 Jan 2025</p>
+                                </td>
+                                <td width="400">
+                                <p> Notification of accepted abstracts</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="200">
+                                <p>10 Jan 2025</p>
+                                </td>
+                                <td width="400">
+                                <p> Publishing list of accepted talks</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="200">
+                                <p>22 Feb 2025
+                                </p>
+                                </td>
+                                <td width="400">
+                                <p> GenAI4SE workshop</p>
+                                </td>
+                            </tr>
+                        </table>
+
+                        <br><br><br><br>
+                        <table>
+                            <tr>
+                                <td colspan="2" width="982" class="col-md-12" style="background:#686868;border-right:0.2px inset #2e2e30;text-align:center;color: aliceblue;"><br />
+                                <p style="text-align:center;color:white;"><strong>Submission Link</strong></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" width="982" class="col-md-12" style="border-right:0.2px inset #2e2e30;text-align:center;"><br />
+                                <p style="text-align:center;"><strong> <a href="https://forms.gle/4UqNFpSJb6hSbnxq6">https://forms.gle/4UqNFpSJb6hSbnxq6</a></strong></p>
+                                </td>
+                            </tr>
+                            
+                        </table>
+                        
+                    </div>
+                </div>
+            -->
+             
+            </div>
+	  <br id="schedule"><br>
+        </div>
+
+            
+        <hr>
+        <h3 id="" style="text-align: center;">Program</h3><hr>
+           <!-- 
+            <div class="table-container">
+                <table style="margin-left: 210px;">
+                    <tr>
+                        <td colspan="2" width="982" class="col-md-12" style="background:#f0f0f0;border-right:0.2px inset #2e2e30;text-align:center;color: rgb(106, 107, 107);"><br />
+                        <p style="text-align:center;"><strong>Schedule</strong></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" width="982" class="col-md-12" style="border-right:0.2px inset #2e2e30;text-align:center;color: rgb(107, 114, 204);"><br />
+                        <p style="text-align:center;"><strong>Coming soon... </strong></p>
+                        </td>
+                    </tr>
+                </table>
+                
+                <br>   
+            </div>
+	  -->
+	                      <!--start-->
+
+        <div>
+          <style type="text/css">
+            table,tr,td, th  {border-collapse:collapse;border:0.2px inset #0e1b4d;}
+            .col-md-2,.col-md-3,.col-md-5,.col-md-4,.col-md-10,.col-md-12,.col-md-6,.col-md-8{
+                border-top:0.2px inset #0e1b4d;
+                border-left:0.2px inset #0e1b4d;
+                padding:10px;
+            }
+            .col-md-10,.col-md-12{
+                border-right:0.2px inset #0e1b4d;
+            }
+            .col-md-2{
+                background:#f0f0f0;
+            }
+            p,li{
+                text-align:justify;
+                padding-left:10px;
+                padding-right:10px;
+                color: black;
+            }
+            
+            .card {
+                background-color: #fff!important;
+                -webkit-box-shadow: 0 1px 1px rgb(0 0 0 / 5%)!important;
+                box-shadow: 0 1px 1px rgb(0 0 0 / 5%)!important;
+            }
+            .center {
+                margin-left: auto;
+                margin-right: auto;
+            }
+	
+	@media only screen and (max-width: 767px) {  
+                .center {
+                max-width: 50%;
+                flex-direction: column;
+                }
+                /* table schedule*/
+                 table {
+                    font-size: 12px; /* Adjust font size as needed */
+                }
+                 td,
+                 th {
+                    padding: 0px; /* Adjust padding as needed */
+                }
+            }
+        </style>
+            <div role="tabpanel" class="col-lg-12 tab-pane">
+                 <table class="center">
+                    <tbody>
+                    <tr> 
+                        <td colspan="4" width="982" class="col-md-12" style="background:#686868;color:white;border-right:0.2px inset #0e1b4d;text-align:center;"><br />
+                        <p style="text-align:center;color:white;"><strong>Schedule</strong></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="15%" style="background:#dfdbdb;border-right:0.2px inset #0e1b4d;text-align:center;">
+                            <p style="text-align:center;"><strong>&nbsp;&nbsp;Time</strong></p>
+                            </td>
+                            <td width="15%" style="background:#dfdbdb;border-right:0.2px inset #0e1b4d;text-align:center;">
+                            <p style="text-align:center;"><strong> &nbsp;&nbsp;Talk</strong> </p>
+                            </td>
+                            <td width="15%" style="background:#dfdbdb;border-right:0.2px inset #0e1b4d;text-align:center;">
+                                <p style="text-align:center;"><strong>&nbsp;&nbsp;Speaker / Chair</strong></p>
+                            </td>
+                            <td width="55%" style="background:#dfdbdb;border-right:0.2px inset #0e1b4d;text-align:center;">
+                                <p style="text-align:center;"><strong> &nbsp;&nbsp;Topic</strong></p>
+                            </td>
+                    </tr>
+                    
+                    <tr style="background-color: #d9edf7;">
+                        <td width="10%">
+                        <p>9:50 AM</p>
+                        </td>
+                        <td width="10%">
+                        <p>Welcome</p>
+                        </td>
+                        <td width="25%">
+                        <p>R.D.Naik</p>
+                        </td>
+                        <td width="55%">
+                        <p>Opening remarks and Agenda</p>
+                        </td>
+                    </tr>
+                    <tr style="background-color: #f0f0f0;">
+                        <td width="10%">
+                            <p>10:00 to 11:30 AM</p>
+                            </td>
+                            <td width="10%">
+                            <p >Session 1</p>
+                            </td>
+                            <td width="25%">
+                            <p>Chair: Raveendra Kumar</p>
+                            </td>
+                            <td width="55%">
+                            <p>GenAI for Software at Scale</p>
+                            </td>
+                    </tr>
+                    <tr style="background-color: #f0f0f0;">
+                        <td width="10%">
+                            <p>10:00 AM</p>
+                            </td>
+                            <td width="10%">
+                            <p>Invited talk 1</p>
+                            </td>
+                            <td width="20%">
+                            <p>Karthik Vaidhyanathan, IIIT Hyd</p>
+                            </td>
+                            <td width="55%">
+                            <p>Playing with Abstractions: At the crossroads of Software Architecture and Generative AI</p>
+                            </td>
+                    </tr>
+                    <tr style="background-color: #f0f0f0;">
+                        <td width="10%">
+                            <p>10:35 AM</p>
+                            </td>
+                            <td width="10%">
+                            <p>Paper 1</p>
+                            </td>
+                            <td width="25%">
+                            <p>Mihir Shriniwas Arya, Aditya Ranjan and Ananmay Abhishek Lohia</p>
+                            </td>
+                            <td width="55%">
+                            <p>ApexCodium: A Multi-Agent System for Automated Code Generation with Enhanced Self-Reflection and Testing</p>
+                            </td>
+                    </tr>
+                    <tr style="background-color: #f0f0f0;">
+                        <td width="10%">
+                            <p>10:55 AM</p>
+                            </td>
+                            <td width="10%">
+                            <p>Abstract 1</p>
+                            </td>
+                            <td width="25%">
+                                <p>Gayathri Ekambaram</p>
+                            </td>
+                            <td width="55%">
+                            <p>Professional Code Engine
+                            </p>
+                            </td>
+                    </tr>
+                    <tr style="background-color: #f0f0f0;">
+                        <td width="10%">
+                            <p>11:10 AM</p>
+                            </td>
+                            <td width="10%">
+                            <p>Discussion / Q&A</p>
+                            </td>
+                            <td width="25%">
+                            <p>Moderated by Raveendra Kumar</p>
+                            </td>
+                            <td width="55%">
+                            <p>Interaction with all speakers of the session</p>
+                            </td>
+                    </tr>
+                    <tr>
+                        <td colspan="4" width="982" class="col-md-12" style="background:#899499; color:white;border-right:0.2px inset #0e1b4d;text-align:center;">
+                        <p style="text-align:center;color:white;"><strong>11:30:00 AM : Tea Break </strong></p>
+                        </td>
+                    </tr>
+                    <tr >
+                        <td width="10%">
+                            <p>12:00 to 13:30 PM</p>
+                            </td>
+                            <td width="10%">
+                            <p>Session 2</p>
+                            </td>
+                            <td width="25%">
+                            <p>Chair: Manasi Patwardhan</p>
+                            </td>
+                            <td width="55%">
+                            <p>Agentic AI for Software Engineering</p>
+                            </td>
+                    </tr>
+
+                    <tr>
+                        <td width="10%">
+                            <p>12:00 PM</p>
+                            </td>
+                            <td width="15%">
+                            <p>Invited talk 2</p>
+                            </td>
+                            <td width="20%">
+                            <p>Diptikalyan Saha</p>
+                            </td>
+                            <td width="55%">
+                            <p>Navigating the Landscape of AI Agents: Characteristics, Innovations, and Future Directions</p>
+                            </td>
+                    </tr>
+                    <tr>
+                        <td width="10%">
+                            <p>12:35 PM</p>
+                            </td>
+                            <td width="15%">
+                            <p>Abstract 2</p>
+                            </td>
+                            <td width="20%">
+                            <p>Dr Anjaneyulu Pasala</p>
+                            </td>
+                            <td width="55%">
+                            <p>MultiFluxAI: Enhancing Platform Engineering with Advanced Agent-Orchestrated Retrieval Systems</p>
+                            </td>
+                    </tr>
+                    <tr>
+                        <td width="10%">
+                            <p>12:50 PM</p>
+                            </td>
+                            <td width="15%">
+                            <p>Invited talk 3</p>
+                            </td>
+                            <td width="20%">
+                            <p>Rajaswa Patil</p>
+                            </td>
+                            <td width="55%">
+                            <p>From Code to Cognition: How Agentic AI Unites Software 1.0 and Software 2.0</p>
+                            </td>
+                    </tr>
+                    <tr>
+                        <td width="10%">
+                            <p>13:25 PM</p>
+                            </td>
+                            <td width="15%">
+                            <p>Discussion / Q&A</p>
+                            </td>
+                            <td width="20%">
+                            <p>Moderated by Manasi Patwardhan</p>
+                            </td>
+                            <td width="55%">
+                            <p>Interaction with all speakers of the session</p>
+                            </td>
+                    </tr>
+                    <tr>
+                        <td colspan="4" width="982" class="col-md-12" style="background:#899499;color:white;border-right:0.2px inset #0e1b4d;text-align:center;">
+                        <p style="text-align:center;color:white;"><strong>13:45:00 PM: Lunch Break </strong></p>
+                        </td>
+                    </tr>
+                    
+                    <tr style="background-color: #f0f0f0;">
+                        <td width="10%">
+                            <p>15:00 to 16:15 PM</p>
+                            </td>
+                            <td width="15%">
+                            <p>Session 3</p>
+                            </td>
+                            <td width="20%">
+                            <p>Chair: RD Naik</p>
+                            </td>
+                            <td width="55%">
+                            <p></p>
+                            </td>
+                    </tr>
+                    <tr style="background-color: #f0f0f0;">
+                        <td width="10%">
+                            <p>15:00 PM</p>
+                            </td>
+                            <td width="15%">
+                            <p>Abstract 3</p>
+                            </td>
+                            <td width="20%">
+                            <p>Ponnampalam Pirapuraj</p>
+                            </td>
+                            <td width="55%">
+                            <p>MuGNN: API Misuse Detection using Graph Neural Networks</p>
+                            </td>
+                    </tr>
+                    <tr style="background-color: #f0f0f0;">
+                        <td width="10%">
+                            <p>15:15 PM</p>
+                            </td>
+                            <td width="15%">
+                            <p>Panel Discussion</p>
+                            </td>
+                            <td width="20%">
+                            <p></p>
+                            </td>
+                            <td width="55%">
+                            <p>GenAI for Large Scale Software Engineering - Hype to Reality</p>
+                            </td>
+                    </tr>
+                    
+                    <tr>
+                        <td colspan="4" width="982" class="col-md-12" style="background:#899499;color:white;border-right:0.2px inset #0e1b4d;text-align:center;">
+                        <p style="text-align:center;color:white;"><strong>16:15:00 PM: Tea Break </strong></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="10%">
+                            <p>16:30 to 18:30 PM</p>
+                            </td>
+                            <td width="15%">
+                            <p>Session 4</p>
+                            </td>
+                            <td width="20%">
+                            <p>Chair: Asha Rajbhoj</p>
+                            </td>
+                            <td width="55%">
+                            <p>GenAI for Software Engineering</p>
+                            </td>
+                    </tr>
+                    <tr>
+                        <td width="10%">
+                            <p>16:30 PM</p>
+                            </td>
+                            <td width="15%">
+                            <p>Invited talk 4</p>
+                            </td>
+			    <td width="25%">
+                            <p>Prof Alexander Serebrenik</p>
+                            </td>
+                            <td width="55%">
+                            <p>Exploring the Effect of Multiple Natural Languages on Code Suggestion using GitHub Copilot</p>
+                            </td>
+                    </tr>
+                    <tr>
+                        <td width="10%">
+                            <p>17:05 PM</p>
+                            </td>
+                            <td width="15%">
+                            <p>Paper 2</p>
+                            </td>
+                            <td width="20%">
+                            <p>Chandan Prakash, Balla Rathan Veer, Pavan Kumar Chittimalli and Ravindra Naik</p>
+                            </td>
+                            <td width="55%">
+                            <p>Model-based Structuring for Enterprise Document Digitalization</p>
+                            </td>
+                    </tr>
+                    <tr>
+                        <td width="10%">
+                            <p>17:25 PM</p>
+                            </td>
+                            <td width="15%">
+                            <p>Paper 3</p>
+                            </td>
+                            <td width="20%">
+                            <p>Akanksha Somase, Piyush Kulkarni, Asha Rajbhoj and Vinay Kulkarni</p>
+                            </td>
+                            <td width="55%">
+                            <p>Leveraging LLMs for Requirements Specification Generation</p>
+                            </td>
+                    </tr>
+                    <tr>
+                        <td width="10%">
+                            <p>17:45 PM</p>
+                            </td>
+                            <td width="15%">
+                            <p>Paper 4</p>
+                            </td>
+                            <td width="20%">
+                            <p>Tirupati Sahu, Neelamadhab Padhy, Rasmita Panigrahi, Lov Kumar and Sanjay Mishra</p>
+                            </td>
+                            <td width="55%">
+                            <p>Federated Risk Register Using RAG model</p>
+                            </td>
+                    </tr>
+                    <tr >
+                        <td width="10%">
+                            <p>18:05 PM</p>
+                            </td>
+                            <td width="15%">
+                            <p>Discussion / Q&A</p>
+                            </td>
+                            <td width="20%">
+                            <p>Moderated by Asha Rajbhoj</p>
+                            </td>
+                            <td width="55%">
+                            <p>Interaction with all speakers of the session</p>
+                            </td>
+                    </tr>
+                    <tr style="background-color: #d9edf7;">
+                        <td width="10%">
+                            <p>18:20 PM</p>
+                            </td>
+                            <td width="15%">
+                            <p>Closing Remarks</p>
+                            </td>
+                            <td width="20%">
+                            <p>RD Naik</p>
+                            </td>
+                            <td width="55%">
+                            <p></p>
+                            </td>
+                    </tr>
+                    
+                    			
+
+                </tbody>
+                </table>
+            </div>
+        </div>
+        <!--End-->
+
+      <h3 id="organizers"></h3>
+        <hr><br>
+        <h3 id="organizers" style="text-align: center;">Organizers</h3>
+        <hr>
+        <div class="organizer">
+	    <div>
+                <img src="assets/Raveendra.png" alt="Organizer 3">
+                <br><br>
+                <h2 style="font-size: medium;color: black;">Raveendra Medicherla</h2>
+                <hr>
+                <p style="font-size: smaller;">is a Principal Scientist at TCS 
+Research. He has 27+ years of experience in Software services 
+delivery and related research. His research interests include 
+application of Symbolic, Generative AI, Neuro symbolic 
+techniques to Software system’s transformation and Software 
+testing.</p>
+            </div>
+            <div>
+                <img src="assets/Asha.png" alt="Organizer 1">
+                <br><br>
+                <h2 style="font-size: medium;color: black;">Asha Rajbhoj</h2>
+                <hr>
+                <p style="font-size: smaller;">
+                     is a Principal Scientist at TCS Research. She has 
+28+ years of experience in industrial research and has 20+ 
+publications and several patents to her credit. Her research interests 
+are in GenAI, Requirement Engineering, Model-Driven 
+Engineering, Meta-modelling, Natural Language Processing, and 
+Business Process Modelling.
+            </div>
+            <div>
+                <img src="assets/Manasi.png" alt="Organizer 4">
+                <br><br>
+                <h2 style="font-size: medium;color: black;">Mansi Patwardhan</h2>
+                <hr>
+                <p style="font-size: smaller;">  is a Senior Scientist at TCS Research. She 
+has 19+ years of experience in academic and industry research, 
+with interests spanning LLM Agnetic Framewokrs, Generative AI, 
+AI for Code and Program Synthesis, Natural Language 
+Understanding and Reasoning, Neuro-Symbolic systems, Multi-Modal Multi-Lingual Processing in which she has over 30+ 
+publications and 5 patents. </p>
+            </div>
+            
+            <div>
+                <img src="assets/Lalita.jpg" alt="Organizer 3" >
+                <br><br>
+                <h2 style="font-size: medium;color: black;">Lalit Mohan</h2>
+                <hr>
+                <p style="font-size: smaller;">  is a Chief Product Officer at Quick Heal. He has 25+ years of experience in Banking Technology and Cyber Security and worked at Infosys, Wells Fargo, IDRBT (an institute established Reserve Bank of India) for building banking platforms. His research includes Software Engineering, Knowledge Management, Cloud and Cyber Security. His recent interest is productizing AI/ML implementations and AI/ML risks, specifically GenAI.</p>
+            </div>
+            <div>
+                <img src="assets/vibhu sir.jpg" alt="Organizer 3">
+                <br><br>
+                <h2 style="font-size: medium;color: black;">Vibhu Saujanya Sharma</h2>
+                <hr>
+                <p style="font-size: smaller;"> is a Technology Research Principal Director at Accenture Labs, with 20+ years of experience in industrial and academic research in areas like software metrics and process insights, cloud computing, and software performance engineering. He has published more than 50+ peer-reviewed research papers in key journals and conferences and is an inventor in 75+ granted patents. His current research focuses on green software engineering and the use of Gen AI in software engineering.
+                    </p>
+            </div>
+	    <div>
+                <img src="assets/Ravindra.png" alt="Organizer 2">
+                <br>
+                <br>
+                <h2 style="font-size: medium;color: black;">Ravindra Naik</h2>
+                <hr>
+                <p style="font-size: smaller;" >
+                    is a Chief Scientist at Tata Consultancy 
+Services Research (TCSR), with over 34 years of experience in 
+industry research around IT system transformations and software 
+development tools, specializing in code analysis, software 
+modelling, code synthesis, NL analysis and reasoning and use of 
+ML and GenAI for various software engineering tasks. He has 20+ 
+publications and 10+ patents to his credit.                    
+                </p>
+            </div>
+        </div>
+
+        <br><hr>
+        <h3 id="venue" style="text-align:center;">Venue </h3><hr>
+        <p style="text-align:center;margin-left: 50px;"><strong>Please visit the <a href="https://conf.researchr.org/home/isec-2025"> ISEC Conference page</a> for workshop location and registration.</strong></p>
+
+        <footer >
+            <div class="footer-content" style="padding-left: 20px;">
+                <p style="color:white;">For more information, <a href="https://conf.researchr.org/home/isec-2025" target="_blank">visit</a>.</p>
+           
+        
+                  <ul class="footer-links">
+                      <li><a href="">Home</a></li>
+                      <li><a  id="Contact" href="mailto: genai4se@googlegroups.com">Contact: genai4se@googlegroups.com</a></li>
+                  </ul>
+              </div>
+            
+        </footer>
+        
+
+        <script src="script.js"></script>
+        <!-- Bootstrap 4 Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  </body>
+</html>
