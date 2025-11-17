@@ -7,7 +7,7 @@ const isProd = process.env.NODE_ENV === 'production';
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  base: isProd ? '/genai-based-se/' : '/',
+  base: isProd ? '/ISEC26-Workshop/' : '/',
   build: {
     outDir: 'docs',
   },
