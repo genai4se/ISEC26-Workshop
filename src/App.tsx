@@ -9,7 +9,8 @@ import NotFound from "./pages/NotFound";
 const queryClient = new QueryClient();
 
 const App = () => {
-  const basename = import.meta.env.PROD ? '/genai-based-se' : '/';
+  const baseFromVite = import.meta.env.BASE_URL ?? "/";
+  const basename = baseFromVite === "/" ? undefined : baseFromVite;
 
   return (
     <QueryClientProvider client={queryClient}>
