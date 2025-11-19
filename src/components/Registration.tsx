@@ -110,7 +110,7 @@ const Registration = () => {
               <div className="text-4xl font-bold text-secondary mb-2">Jan 15, 2026</div>
               <p className="text-muted-foreground font-medium">Notification of Acceptance</p>
             </div>
-            The Microsoft CMT service will be used for managing the peer-reviewing process for this workshop. This service was provided for free by Microsoft and they bore all expenses, including costs for Azure cloud services as well as for software development and support.
+            The Microsoft CMT service was used for managing the peer-reviewing process for this conference. This service was provided for free by Microsoft and they bore all expenses, including costs for Azure cloud services as well as for software development and support.
           </div>
         </Card>
         
