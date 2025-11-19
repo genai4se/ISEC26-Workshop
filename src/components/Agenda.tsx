@@ -75,7 +75,7 @@ const Agenda = () => {
           <p className="text-muted-foreground text-lg">
             * Final format will encourage engaging and strong interactions among all participants. Coffee breaks and networking sessions included throughout the day.
             <br></br>
-            * The Microsoft CMT service will be used for managing the peer-reviewing process for this workshop. This service was provided for free by Microsoft and they bore all expenses, including costs for Azure cloud services as well as for software development and support.
+            The Microsoft CMT service was used for managing the peer-reviewing process for this conference. This service was provided for free by Microsoft and they bore all expenses, including costs for Azure cloud services as well as for software development and support.
 
           </p>
         </div>
