@@ -24,7 +24,7 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold mb-4">Conference</h4>
             <ul className="space-y-2 text-white/80">
-              <li><a href="https://isec.acm.org" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">ISEC'26 Website</a></li>
+              <li><a href="https://conf.researchr.org/home/isec-2026" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">ISEC'26 Website</a></li>
               <li><a href="https://www.acm.org/publications/proceedings-template" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">ACM Template</a></li>
               <li><a href="mailto:genai4se@googlegroups.com" className="hover:text-white transition-colors">Contact Organizers</a></li>
             </ul>
