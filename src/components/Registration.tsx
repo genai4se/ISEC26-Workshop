@@ -52,29 +52,28 @@ const Registration = () => {
             At least one author must register for ISEC to present in-person.
           </p>
         </div>
-        
+
         <div className="grid md:grid-cols-3 gap-8 mb-16">
           {submissionTypes.map((type, index) => (
-            <Card 
+            <Card
               key={index}
-              className={`relative p-8 transition-all duration-300 hover:-translate-y-2 ${
-                type.highlighted 
-                  ? 'border-primary border-2 shadow-glow bg-gradient-to-b from-card to-primary/5' 
-                : 'border-2 border-primary/10'
-              }`}
+              className={`relative p-8 transition-all duration-300 hover:-translate-y-2 ${type.highlighted
+                  ? 'border-primary border-2 shadow-glow bg-gradient-to-b from-card to-primary/5'
+                  : 'border-2 border-primary/10'
+                }`}
             >
               {/* {type.highlighted && (
                 <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 bg-gradient-hero text-white text-sm font-semibold rounded-full">
                   RECOMMENDED
                 </div>
               )} */}
-              
+
               <div className="text-center mb-6">
                 <h3 className="text-2xl font-bold text-card-foreground mb-2">{type.name}</h3>
                 <p className="text-muted-foreground mb-4">{type.description}</p>
                 <div className="text-lg font-semibold text-primary mb-2">{type.format}</div>
               </div>
-              
+
               <ul className="space-y-3 mb-8">
                 {type.features.map((feature, featureIndex) => (
                   <li key={featureIndex} className="flex items-start gap-3">
@@ -83,18 +82,21 @@ const Registration = () => {
                   </li>
                 ))}
               </ul>
-              
-              <Button 
-                variant={type.highlighted ? "hero" : "outline"} 
+
+              <Button
+                variant={type.highlighted ? "hero" : "outline"}
                 className="w-full"
                 size="lg"
+                asChild
               >
-                Submit {type.name}
+                <a href="https://cmt3.research.microsoft.com/GenAISE2026/Submission/Index" target="_blank" rel="noopener noreferrer">
+                  Submit {type.name}
+                </a>
               </Button>
             </Card>
           ))}
         </div>
-        
+
         <Card className="p-8 md:p-12 bg-muted/30 mb-12">
           <h3 className="text-3xl font-bold text-center text-foreground mb-8">Important Dates</h3>
           <div className="grid md:grid-cols-3 gap-8">
@@ -110,10 +112,9 @@ const Registration = () => {
               <div className="text-4xl font-bold text-secondary mb-2">Jan 15, 2026</div>
               <p className="text-muted-foreground font-medium">Notification of Acceptance</p>
             </div>
-            The Microsoft CMT service was used for managing the peer-reviewing process for this conference. This service was provided for free by Microsoft and they bore all expenses, including costs for Azure cloud services as well as for software development and support.
           </div>
         </Card>
-        
+
         <Card className="p-8 md:p-12 bg-muted/30">
           <h3 className="text-3xl font-bold text-center text-foreground mb-8">Contact Information</h3>
           <div className="grid md:grid-cols-2 gap-8 text-center">
@@ -126,7 +127,7 @@ const Registration = () => {
                 genai4se@googlegroups.com
               </a>
             </div>
-            
+
             <div className="space-y-2">
               <div className="w-12 h-12 rounded-xl bg-gradient-hero flex items-center justify-center mx-auto mb-4">
                 <FileText className="w-6 h-6 text-white" />
