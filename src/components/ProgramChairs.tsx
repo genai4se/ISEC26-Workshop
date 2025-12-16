@@ -12,6 +12,9 @@ const programChairs = [
     { name: "Priyanshu Gupta", affiliation: "Microsoft" },
     { name: "Rodrigo Falcao", affiliation: "Fraunhofer IESE" },
     { name: "Matteo Esposito", affiliation: "University of Oulu" },
+    { name: "Vikrant Kaulgud", affiliation: "Accenture Labs" },
+    { name: "Rohit Mehra", affiliation: "Accenture Labs" },
+    { name: "Y.V. Haribhakta", affiliation: "COEP Tech" },
 ];
 
 const ProgramChairs = () => {
