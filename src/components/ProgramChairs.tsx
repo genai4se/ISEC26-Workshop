@@ -20,35 +20,25 @@ const ProgramChairs = () => {
             <div className="max-w-6xl mx-auto">
                 <div className="text-center mb-16">
                     <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-                        Program Chairs
+                        PC Reviewers
                     </h2>
                     <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
                         Distinguished experts leading the workshop program committee
                     </p>
                 </div>
 
-                <Card className="overflow-hidden border-2 border-primary/10">
-                    <div className="overflow-x-auto">
-                        <table className="w-full">
-                            <thead className="bg-gradient-hero text-white">
-                                <tr>
-                                    <th className="px-6 py-4 text-left text-lg font-semibold">Name</th>
-                                    <th className="px-6 py-4 text-left text-lg font-semibold">Affiliation</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                {programChairs.map((chair, index) => (
-                                    <tr
-                                        key={index}
-                                        className={`border-t border-primary/10 hover:bg-primary/5 transition-colors ${index % 2 === 0 ? 'bg-muted/30' : 'bg-background'
-                                            }`}
-                                    >
-                                        <td className="px-6 py-4 font-medium text-foreground">{chair.name}</td>
-                                        <td className="px-6 py-4 text-muted-foreground">{chair.affiliation}</td>
-                                    </tr>
-                                ))}
-                            </tbody>
-                        </table>
+                <Card className="overflow-hidden border-2 border-primary/10 p-8">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        {programChairs.map((chair, index) => (
+                            <div
+                                key={index}
+                                className="p-4 rounded-lg bg-muted/30 hover:bg-primary/5 transition-colors border border-primary/10"
+                            >
+                                <p className="text-lg font-medium text-foreground">
+                                    {chair.name} <span className="text-muted-foreground">({chair.affiliation})</span>
+                                </p>
+                            </div>
+                        ))}
                     </div>
                 </Card>
             </div>
