@@ -37,7 +37,7 @@ const Hero = () => {
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
           <a href="https://cmt3.research.microsoft.com/GenAISE2026/Submission/Index" target="_blank" rel="noopener noreferrer">
             <Button variant="hero" size="lg" className="group">
-              Submit Paper or Abstract
+              Submit Paper or Extended Abstract
               <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
             </Button>
           </a>

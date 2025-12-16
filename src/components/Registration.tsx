@@ -15,7 +15,7 @@ const submissionTypes = [
     highlighted: false,
   },
   {
-    name: "Abstracts",
+    name: "Extended Abstracts",
     format: "Text Format (Max 500 words)",
     description: "Most accessible submission",
     features: [
@@ -46,7 +46,7 @@ const Registration = () => {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-            Call for Papers & Abstracts
+            Call for Papers & Extended Abstracts
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             At least one author must register for ISEC to present in-person.
@@ -58,8 +58,8 @@ const Registration = () => {
             <Card
               key={index}
               className={`relative p-8 transition-all duration-300 hover:-translate-y-2 ${type.highlighted
-                  ? 'border-primary border-2 shadow-glow bg-gradient-to-b from-card to-primary/5'
-                  : 'border-2 border-primary/10'
+                ? 'border-primary border-2 shadow-glow bg-gradient-to-b from-card to-primary/5'
+                : 'border-2 border-primary/10'
                 }`}
             >
               {/* {type.highlighted && (
@@ -101,12 +101,12 @@ const Registration = () => {
           <h3 className="text-3xl font-bold text-center text-foreground mb-8">Important Dates</h3>
           <div className="grid md:grid-cols-3 gap-8">
             <div className="text-center">
-              <div className="text-4xl font-bold text-primary mb-2">Dec 15, 2025</div>
+              <div className="text-4xl font-bold text-primary mb-2"><s>Dec 15, 2025</s></div>
               <p className="text-muted-foreground font-medium">Abstract Submission Deadline</p>
             </div>
             <div className="text-center">
               <div className="text-4xl font-bold text-primary mb-2">Dec 31, 2025</div>
-              <p className="text-muted-foreground font-medium">Paper Submission Deadline</p>
+              <p className="text-muted-foreground font-medium">Paper Submission / Extended Abstract Deadline</p>
             </div>
             <div className="text-center">
               <div className="text-4xl font-bold text-secondary mb-2">Jan 15, 2026</div>
