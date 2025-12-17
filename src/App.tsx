@@ -5,6 +5,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
+import { ACMPublicationNotice } from "./components/ACMPublicationNotice";
 
 const queryClient = new QueryClient();
 
@@ -17,6 +18,7 @@ const App = () => {
       <TooltipProvider>
         <Toaster />
         <Sonner />
+        <ACMPublicationNotice />
         <BrowserRouter basename={basename}>
           <Routes>
             <Route path="/" element={<Index />} />

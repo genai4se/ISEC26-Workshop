@@ -98,6 +98,26 @@ const Registration = () => {
         </div>
 
         <Card className="p-8 md:p-12 bg-muted/30 mb-12">
+          <div className="space-y-4">
+            <p className="text-muted-foreground">
+              <span className="text-primary font-semibold">*</span> Like all other articles in ISEC proceedings, accepted workshop papers will also be published as per ACM{" "}
+              <a href="https://authors.acm.org/open-access" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-primary-dark transition-colors">
+                Open Access
+              </a>
+              . A fee of $125 (for authors based in India and ACM members) per paper will have to be paid to ACM by authors if the corresponding author is not from a{" "}
+              <a href="https://libraries.acm.org/acmopen/open-participants" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-primary-dark transition-colors">
+                participating organization/institute/university
+              </a>
+              , or the institute/university is not covered under GoI's{" "}
+              <a href="https://libraries.acm.org/acmopen/one-nation-one-subscription" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-primary-dark transition-colors">
+                One Nation One Subscription (ONOS)
+              </a>
+              .
+            </p>
+          </div>
+        </Card>
+
+        <Card className="p-8 md:p-12 bg-muted/30 mb-12">
           <h3 className="text-3xl font-bold text-center text-foreground mb-8">Important Dates</h3>
           <div className="grid md:grid-cols-3 gap-8">
             <div className="text-center">
