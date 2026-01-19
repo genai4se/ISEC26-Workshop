@@ -129,7 +129,7 @@ const Registration = () => {
               <p className="text-muted-foreground font-medium">Paper Submission / Extended Abstract Deadline</p>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold text-secondary mb-2">Jan 26, 2026</div>
+              <div className="text-4xl font-bold text-secondary mb-2">Jan 25, 2026</div>
               <p className="text-muted-foreground font-medium">Notification of Acceptance</p>
             </div>
             <div className="text-center">
