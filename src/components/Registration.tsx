@@ -119,18 +119,22 @@ const Registration = () => {
 
         <Card className="p-8 md:p-12 bg-muted/30 mb-12">
           <h3 className="text-3xl font-bold text-center text-foreground mb-8">Important Dates</h3>
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="text-4xl font-bold text-primary mb-2"><s>Dec 15, 2025</s></div>
               <p className="text-muted-foreground font-medium">Abstract Submission Deadline</p>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold text-primary mb-2">Dec 31, 2025</div>
+              <div className="text-4xl font-bold text-primary mb-2"><s>Dec 31, 2025</s></div>
               <p className="text-muted-foreground font-medium">Paper Submission / Extended Abstract Deadline</p>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold text-secondary mb-2">Jan 15, 2026</div>
+              <div className="text-4xl font-bold text-secondary mb-2">Jan 26, 2026</div>
               <p className="text-muted-foreground font-medium">Notification of Acceptance</p>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl font-bold text-secondary mb-2">Jan 31, 2026</div>
+              <p className="text-muted-foreground font-medium">Camera Ready Version</p>
             </div>
           </div>
         </Card>
