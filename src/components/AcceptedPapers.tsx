@@ -13,85 +13,86 @@ const papers: Paper[] = [
   {
     title: "The Role of AI in Epistemic Usability: Assessing User Knowledge to Optimize Product Design",
     authors: [
-      "vikrant.bhosle@quickheal.com",
-      "sanikahalale@gmail.com",
-      "akhileshtetambe.info@gmail.com",
-      "jaideep.chandran@curtin.edu.au",
-      "archana.janjal@bharatividyapeeth.edu",
+      "Vikrant Bhosle",
+      "Sanika Halale",
+      "Akhilesh Tetambe",
+      "Jaideep Chandran",
+      "Archana Janjal",
     ],
     type: "Paper",
   },
   {
     title: "Beyond Input Maturity: Evolving LLM-Based Test Generation",
     authors: [
-      "hrishikesh.karmarkar@gmail.com",
-      "arora.nishtha@digitate.ai",
-      "agrawal.pankaj5@digitate.ai",
+      "Hrishikesh Karmarkar",
+      "Nishtha Arora",
+      "Pankaj Agrawal",
     ],
     type: "Paper",
   },
   {
     title: "RegAnaCheck : Leveraging Generative AI for Regulatory Applicability Analysis",
     authors: [
-      "soham.raktawan@tcs.com",
-      "asha.rajbhoj@tcs.com",
-      "vinay.vkulkarni@tcs.com",
+      "Soham Raktawan",
+      "Asha Rajbhoj",
+      "Vinay Kulkarni",
     ],
     type: "Paper",
   },
   {
     title: "The Role of GitHub Copilot-Assisted Development in the Adoption of Lightweight Edge Agents: A Perspective on Lifecycle Acceleration, Local Inference, and Security",
     authors: [
-      "ravic@nitw.ac.in",
-      "piyush.ghodke@quickheal.com",
-      "balaji.kumbhar1@quickheal.com",
+      "S. Ravi Chandra",
+      "Piyush Ghodke",
+      "Balaji Kumbhar",
     ],
     type: "Paper",
   },
   {
     title: "Assessing General Purpose LLMs for Design Generation from Ontological Prompt Representations devoid of Design Clues",
-    authors: ["ayab@cse.iitb.ac.in", "rkj@cse.iitb.ac.in"],
+    authors: ["Jaya Bharti", "Rushikesh Joshi"],
     type: "Paper",
   },
   {
     title: "SmartDocComparator - A Template Guided Smart Document Comparator for Acceptance Testing",
     authors: [
-      "Pavan.chittimalli@tcs.com",
-      "rathanveer.balla@tcs.com",
-      "ch.pr@tcs.com",
+      "Pavan Kumar CHITTIMALLI",
+      "RATHAN VEER BALLA",
+      "CHANDAN PRAKASH",
+      "RAVINDRA NAIK",
     ],
     type: "Paper",
   },
   {
     title: "Tracing Domain Services in Application Code using Generative AI",
     authors: [
-      "gandhi.jay1@tcs.com",
-      "shrishti.pradhan@tcs.com",
-      "raveendra.kumar@tcs.com",
+      "Jay Gandhi",
+      "Shrishti Pradhan",
+      "Raveendra Kumar Medicherla",
     ],
     type: "Paper",
   },
   {
     title: "Agentic AI-Assisted Traceability and Validation in Silicon Engineering",
     authors: [
-      "riyavanshi.pathania@accenture.com",
-      "sankar.narayan.das@accenture.com",
-      "vibhu.sharma@accenture.com",
-      "s.g.choudhury@accenture.com",
-      "nikhil.bamby@accenture.com",
-      "vikrant.kaulgud@accenture.com",
-      "anil.kempanna@accenture.com",
-      "uday.a.joshi@accenture.com",
+      "Priyavanshi Pathania",
+      "Sankar Narayan Das",
+      "Vibhu Saujanya Sharma",
+      "Swapnajeet Choudhury",
+      "Nikhil Bamby",
+      "Vikrant Kaulgud",
+      "Anil Kempanna",
+      "Uday Joshi",
     ],
     type: "Abstract",
   },
   {
     title: "The Rise of Agentic Tutors: Contextual, Personalized, and In-Flow Learning for Software Developers",
     authors: [
-      "rohit.a.mehra@accenture.com",
-      "kapil.singi@accenture.com",
-      "vibhu.sharma@accenture.com",
-      "vikrant.kaulgud@accenture.com",
+      "Rohit Mehra",
+      "Kapil Singi",
+      "Vibhu Saujanya Sharma",
+      "Vikrant Kaulgud",
     ],
     type: "Abstract",
   },
@@ -143,7 +144,7 @@ const AcceptedPapers = () => {
                       Authors
                     </p>
                     <div className="flex flex-wrap gap-2">
-                       {paper.authors.map((author, idx) => (
+                      {paper.authors.map((author, idx) => (
                         <span key={idx} className="text-sm bg-secondary/30 px-2 py-1 rounded text-foreground/80">
                           {author}
                         </span>
