@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Calendar, MapPin } from "lucide-react";
+import { Calendar, MapPin } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
+import schedulePdf from "@/assets/schedule.pdf";
 
 const Hero = () => {
   return (
@@ -35,10 +36,10 @@ const Hero = () => {
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-          <a href="https://cmt3.research.microsoft.com/GenAISE2026/Submission/Index" target="_blank" rel="noopener noreferrer">
+          <a href={schedulePdf} target="_blank" rel="noopener noreferrer">
             <Button variant="hero" size="lg" className="group">
-              Submit Paper or Extended Abstract
-              <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
+              Program Schedule
+              <Calendar className="ml-2 group-hover:translate-x-1 transition-transform" />
             </Button>
           </a>
           {/* <Button variant="outline" size="lg" className="bg-white/10 backdrop-blur-sm border-white/30 text-white hover:bg-white/20">

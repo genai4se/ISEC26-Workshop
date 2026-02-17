@@ -9,7 +9,7 @@ const Footer = () => {
               Third Workshop on Generative AI based Software Engineering @ ISEC'26, IIS Jaipur, India
             </p>
           </div>
-          
+
           <div>
             <h4 className="font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2 text-white/80">
@@ -17,10 +17,9 @@ const Footer = () => {
               <li><a href="#questions" className="hover:text-white transition-colors">Key Questions</a></li>
               <li><a href="#format" className="hover:text-white transition-colors">Workshop Format</a></li>
               <li><a href="#organizers" className="hover:text-white transition-colors">Organizers</a></li>
-              <li><a href="#submission" className="hover:text-white transition-colors">Call for Papers</a></li>
             </ul>
           </div>
-          
+
           <div>
             <h4 className="font-semibold mb-4">Conference</h4>
             <ul className="space-y-2 text-white/80">
@@ -30,7 +29,7 @@ const Footer = () => {
             </ul>
           </div>
         </div>
-        
+
         <div className="pt-8 border-t border-white/20 text-center text-white/70">
           <p>&copy; 2026 Third Workshop on Generative AI based Software Engineering (GenAI based SE). Part of ISEC'26.</p>
         </div>
