@@ -12,3 +12,6 @@ Allow: /
 
 User-agent: *
 Allow: /
+ 
+# Sitemap (replace with your production URL)
+Sitemap: https://genai4se.github.io/ISEC26-Workshop/sitemap.xml
